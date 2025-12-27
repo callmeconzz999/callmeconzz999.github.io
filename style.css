@@ -83,7 +83,7 @@ p {
   right: -10%;
   width: 380px;
   height: 380px;
-  background: url('handprint.png') no-repeat center/contain;
+  background: url('Handprint.png') no-repeat center/contain;
   filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%);
   opacity: 0.15;
   z-index: 0;
