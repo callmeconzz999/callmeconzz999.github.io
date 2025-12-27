@@ -15,15 +15,34 @@ body {
 /* ===== HERO ===== */
 header {
   min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 40px;
+  overflow: hidden;
 }
 
+/* ===== RED HANDPRINT (SYMBOLIC) ===== */
+.handprint {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: rgba(192, 0, 0, 0.15);
+  border-radius: 50% 50% 45% 45%;
+  top: 15%;
+  right: 10%;
+  filter: blur(25px);
+  transform: rotate(-10deg);
+  z-index: 0;
+}
+
+/* ===== TITLE ===== */
 .title {
+  position: relative;
+  z-index: 1;
   font-family: 'Fjalla One', sans-serif;
   font-size: 3.6rem;
   font-weight: 400;
@@ -35,6 +54,8 @@ header {
 }
 
 .subtitle {
+  position: relative;
+  z-index: 1;
   max-width: 650px;
   color: #aaa;
   margin-bottom: 35px;
@@ -43,6 +64,8 @@ header {
 
 /* ===== BUTTONS ===== */
 .btn {
+  position: relative;
+  z-index: 1;
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 2px;
   font-size: 1.1rem;
@@ -90,6 +113,21 @@ p {
   flex-wrap: wrap;
 }
 
+/* ===== AWARENESS RIBBON ===== */
+.awareness {
+  position: relative;
+}
+
+.ribbon {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: #c00000;
+  opacity: 0.7;
+}
+
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
@@ -103,6 +141,13 @@ footer {
 @media (max-width: 600px) {
   .title {
     font-size: 2.5rem;
+  }
+
+  .handprint {
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    right: -20%;
   }
 }
 
