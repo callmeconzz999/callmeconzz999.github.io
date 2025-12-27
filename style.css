@@ -1,28 +1,61 @@
-/* ===== RESET ===== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { background-color: #0a0a0a; color: #d0d0d0; font-family: Arial, Helvetica, sans-serif; }
+/* ===== AWARENESS SECTION ===== */
+.awareness {
+  position: relative;
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
 
-/* ===== HERO & SECTIONS ===== */
-header { min-height: 100vh; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px; overflow: hidden; }
-.title { position: relative; z-index: 1; font-family: 'Fjalla One', sans-serif; font-size: 3.6rem; font-weight: 400; color: #000; background: #ffffff; padding: 18px 38px; letter-spacing: 3px; margin-bottom: 22px; }
-.subtitle { position: relative; z-index: 1; max-width: 650px; color: #aaa; margin-bottom: 35px; font-size: 1.05rem; }
-
-/* ===== HANDPRINT ===== */
-.handprint {
+.awareness .handprint {
   position: absolute;
   top: 10%;
-  right: 5%;
+  right: -10%;
   width: 380px;
   height: 380px;
-  background: url('Handprint.png') no-repeat center/contain;
+  background: url('handprint.png') no-repeat center/contain;
   filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%);
-  opacity: 0.2;
+  opacity: 0.15;
   z-index: 0;
-
-  /* Glow Animation */
   animation: glowPulse 2.5s infinite alternate;
 }
 
+/* Vertical ribbon */
+.awareness .ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;           /* thicker, more visible */
+  height: 100%;
+  background: #c00000;
+  opacity: 1;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+/* Content sits above handprint and ribbon */
+.awareness .awareness-content {
+  position: relative;
+  z-index: 2;
+}
+
+.awareness h2 {
+  font-family: 'Fjalla One', sans-serif;
+  color: #fff;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.awareness p {
+  line-height: 1.7;
+  color: #bdbdbd;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Reuse glowPulse animation from handprint */
 @keyframes glowPulse {
   0% {
     filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%) drop-shadow(0 0 15px rgba(192,0,0,0.5));
@@ -36,32 +69,5 @@ header { min-height: 100vh; position: relative; display: flex; flex-direction: c
     filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%) drop-shadow(0 0 20px rgba(192,0,0,0.5));
     opacity: 0.2;
   }
-}
-
-/* ===== BUTTONS ===== */
-.btn { font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; font-size: 1.1rem; padding: 14px 34px; background: #c00000; color: #fff; text-decoration: none; border-radius: 4px; transition: all 0.3s ease; box-shadow: 0 0 18px rgba(192,0,0,0.6); }
-.btn:hover { background: #ff1f1f; box-shadow: 0 0 28px rgba(255,31,31,0.9); }
-
-/* ===== SECTIONS ===== */
-section { padding: 80px 20px; max-width: 1000px; margin: auto; position: relative; }
-h2 { font-family: 'Fjalla One', sans-serif; color: #fff; font-size: 2.1rem; margin-bottom: 25px; letter-spacing: 2px; text-transform: uppercase; }
-p { line-height: 1.7; color: #bdbdbd; max-width: 850px; font-size: 1rem; }
-.button-group { margin-top: 35px; display: flex; gap: 20px; flex-wrap: wrap; }
-
-/* ===== AWARENESS RIBBON ===== */
-.awareness .ribbon { position: absolute; top: -30px; left: 0; width: 6px; height: 100%; background: #c00000; opacity: 0.7; }
-
-/* ===== NAV ===== */
-.nav { display: flex; gap: 25px; padding: 20px; justify-content: center; border-bottom: 1px solid #1a1a1a; }
-.nav a { font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; color: #bbb; text-decoration: none; font-size: 1.1rem; }
-.nav a:hover { color: #fff; }
-
-/* ===== FOOTER ===== */
-footer { text-align: center; padding: 35px; color: #666; font-size: 0.9rem; border-top: 1px solid #1a1a1a; }
-
-/* ===== MOBILE ===== */
-@media (max-width: 600px) {
-  .title { font-size: 2.5rem; }
-  .handprint { width: 250px; height: 250px; top: 10%; right: -20%; }
 }
 
