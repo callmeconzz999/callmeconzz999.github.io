@@ -16,8 +16,26 @@ header { min-height: 100vh; position: relative; display: flex; flex-direction: c
   height: 380px;
   background: url('Handprint.png') no-repeat center/contain;
   filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%);
-  opacity: 0.15;
+  opacity: 0.2;
   z-index: 0;
+
+  /* Glow Animation */
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% {
+    filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%) drop-shadow(0 0 15px rgba(192,0,0,0.5));
+    opacity: 0.15;
+  }
+  50% {
+    filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%) drop-shadow(0 0 30px rgba(255,0,0,0.6));
+    opacity: 0.25;
+  }
+  100% {
+    filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%) drop-shadow(0 0 20px rgba(192,0,0,0.5));
+    opacity: 0.2;
+  }
 }
 
 /* ===== BUTTONS ===== */
@@ -30,7 +48,7 @@ h2 { font-family: 'Fjalla One', sans-serif; color: #fff; font-size: 2.1rem; marg
 p { line-height: 1.7; color: #bdbdbd; max-width: 850px; font-size: 1rem; }
 .button-group { margin-top: 35px; display: flex; gap: 20px; flex-wrap: wrap; }
 
-/* ===== RIBBON ===== */
+/* ===== AWARENESS RIBBON ===== */
 .awareness .ribbon { position: absolute; top: -30px; left: 0; width: 6px; height: 100%; background: #c00000; opacity: 0.7; }
 
 /* ===== NAV ===== */
@@ -46,3 +64,4 @@ footer { text-align: center; padding: 35px; color: #666; font-size: 0.9rem; bord
   .title { font-size: 2.5rem; }
   .handprint { width: 250px; height: 250px; top: 10%; right: -20%; }
 }
+
