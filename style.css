@@ -2,7 +2,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background-color: #0a0a0a; color: #d0d0d0; font-family: Arial, Helvetica, sans-serif; }
 
-/* ===== HERO & SECTIONS ===== */
+/* ===== HERO / TITLE ===== */
 header {
   min-height: 100vh;
   position: relative;
@@ -41,15 +41,13 @@ header {
 .handprint {
   position: absolute;
   top: 10%;
-  right: -50px; /* slightly outside container */
+  right: -50px;
   width: 380px;
   height: 380px;
-  background: url('Handprint.png') no-repeat center/contain;
+  background: url('handprint.png') no-repeat center/contain;
   filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%);
   opacity: 0.15;
   z-index: 0;
-
-  /* Glow animation */
   animation: glowPulse 2.5s infinite alternate;
 }
 
@@ -70,6 +68,23 @@ header {
   background: #ff1f1f;
   box-shadow: 0 0 28px rgba(255,31,31,0.9);
 }
+
+/* ===== NAVIGATION ===== */
+.nav {
+  display: flex;
+  gap: 25px;
+  padding: 20px;
+  justify-content: center;
+  border-bottom: 1px solid #1a1a1a;
+}
+.nav a {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+.nav a:hover { color: #fff; }
 
 /* ===== SECTIONS ===== */
 section {
@@ -97,6 +112,20 @@ p {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===== LISTEN SECTION ===== */
+.listen {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.spotify-player {
+  margin: auto;
+  margin-bottom: 30px;
+  max-width: 500px;
 }
 
 /* ===== AWARENESS SECTION ===== */
@@ -105,24 +134,20 @@ p {
   padding: 100px 20px;
   max-width: 1000px;
   margin: auto;
-  overflow: visible; /* allow handprint to extend outside section */
+  overflow: visible;
 }
-
-/* Handprint behind content */
 .awareness .handprint {
   position: absolute;
   top: 10%;
-  right: -50px; /* slightly off edge */
+  right: -50px;
   width: 380px;
   height: 380px;
-  background: url('Handprint.png') no-repeat center/contain;
+  background: url('handprint.png') no-repeat center/contain;
   filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%);
   opacity: 0.15;
   z-index: 0;
   animation: glowPulse 2.5s infinite alternate;
 }
-
-/* Vertical ribbon */
 .awareness .ribbon {
   position: absolute;
   top: 0;
@@ -134,13 +159,10 @@ p {
   z-index: 1;
   border-radius: 3px;
 }
-
-/* Content sits above handprint & ribbon */
 .awareness .awareness-content {
   position: relative;
   z-index: 2;
 }
-
 .awareness h2 {
   font-family: 'Fjalla One', sans-serif;
   color: #fff;
@@ -149,30 +171,12 @@ p {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
 .awareness p {
   line-height: 1.7;
   color: #bdbdbd;
   font-size: 1rem;
   margin-bottom: 15px;
 }
-
-/* ===== NAV ===== */
-.nav {
-  display: flex;
-  gap: 25px;
-  padding: 20px;
-  justify-content: center;
-  border-bottom: 1px solid #1a1a1a;
-}
-.nav a {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 2px;
-  color: #bbb;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-.nav a:hover { color: #fff; }
 
 /* ===== FOOTER ===== */
 footer {
