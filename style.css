@@ -37,20 +37,6 @@ header {
   font-size: 1.05rem;
 }
 
-/* ===== HANDPRINT WITH GLOW ===== */
-.handprint {
-  position: absolute;
-  top: 10%;
-  right: -50px;
-  width: 380px;
-  height: 380px;
-  background: url('handprint.png') no-repeat center/contain;
-  filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%);
-  opacity: 0.15;
-  z-index: 0;
-  animation: glowPulse 2.5s infinite alternate;
-}
-
 /* ===== BUTTONS ===== */
 .btn {
   font-family: 'Bebas Neue', sans-serif;
@@ -128,56 +114,6 @@ p {
   max-width: 500px;
 }
 
-/* ===== AWARENESS SECTION ===== */
-.awareness {
-  position: relative;
-  padding: 100px 20px;
-  max-width: 1000px;
-  margin: auto;
-  overflow: visible;
-}
-.awareness .handprint {
-  position: absolute;
-  top: 10%;
-  right: -50px;
-  width: 380px;
-  height: 380px;
-  background: url('handprint.png') no-repeat center/contain;
-  filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%);
-  opacity: 0.15;
-  z-index: 0;
-  animation: glowPulse 2.5s infinite alternate;
-}
-.awareness .ribbon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 12px;
-  height: 100%;
-  background: #c00000;
-  opacity: 1;
-  z-index: 1;
-  border-radius: 3px;
-}
-.awareness .awareness-content {
-  position: relative;
-  z-index: 2;
-}
-.awareness h2 {
-  font-family: 'Fjalla One', sans-serif;
-  color: #fff;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.awareness p {
-  line-height: 1.7;
-  color: #bdbdbd;
-  font-size: 1rem;
-  margin-bottom: 15px;
-}
-
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
@@ -190,22 +126,5 @@ footer {
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
   .title { font-size: 2.5rem; }
-  .handprint { width: 250px; height: 250px; right: -30px; top: 5%; }
-  .awareness h2 { font-size: 1.8rem; }
-}
-
-/* ===== GLOW ANIMATION ===== */
-@keyframes glowPulse {
-  0% {
-    filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%) drop-shadow(0 0 15px rgba(192,0,0,0.5));
-    opacity: 0.15;
-  }
-  50% {
-    filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%) drop-shadow(0 0 30px rgba(255,0,0,0.6));
-    opacity: 0.25;
-  }
-  100% {
-    filter: invert(24%) sepia(88%) saturate(7493%) hue-rotate(357deg) brightness(95%) contrast(85%) drop-shadow(0 0 20px rgba(192,0,0,0.5));
-    opacity: 0.2;
-  }
+  .listen h2 { font-size: 1.8rem; }
 }
